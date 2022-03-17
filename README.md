@@ -1,6 +1,6 @@
 # Movie Plan
 
-### [Live Site]()
+### [Live Site](https://movie-plan.netlify.app/)
 
 # Features
 
