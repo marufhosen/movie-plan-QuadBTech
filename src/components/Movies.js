@@ -7,6 +7,7 @@ const Movies = () => {
 
   let navigate = useNavigate();
 
+  // get all from api
   useEffect(() => {
     axios.get(`https://api.tvmaze.com/search/shows?q=all`).then((res) => {
       const movies = res.data;

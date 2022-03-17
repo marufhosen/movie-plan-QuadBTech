@@ -6,6 +6,7 @@ import Movies from "./components/Movies";
 function App() {
   return (
     <div className="bg-violet-900 min-h-screen">
+      {/* Routing */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Movies />} />

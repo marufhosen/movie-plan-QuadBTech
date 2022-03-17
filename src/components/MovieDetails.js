@@ -7,8 +7,10 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
 
+  //get movie id from url perameter
   const { id } = useParams();
 
+  //fetch data for particular id
   useEffect(() => {
     axios.get(`https://api.tvmaze.com/shows/${id}`).then((res) => {
       const movie = res.data;
@@ -24,6 +26,7 @@ const MovieDetails = () => {
       <div className="xl:mx-auto xl:container">
         <div className="lg:px-20 md:px-6 px-4 md:py-12 py-8">
           {loading ? (
+            //   loading set
             <div className="text-gray-300 text-center font-semibold text-xl tracking-widest">
               Loading...
             </div>
@@ -68,6 +71,7 @@ const MovieDetails = () => {
         </div>
       </div>
       {show ? (
+        //   Modal form
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
